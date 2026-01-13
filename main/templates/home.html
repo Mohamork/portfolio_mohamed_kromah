@@ -10,7 +10,15 @@ Home Page
 {% endblock extrahead %}
 
 {% block content %}
-<p> This is the homepage </p>
+<div class="filters">
+    <input type="text" id="name-search" placeholder="Search for projects...."/>
+    <div class="tags-list">
+        {% for tag in tags %}
+           <button class="tag" data-tag="{{ tag.name|lower }}">{{ tag.name }}</button> 
+        {% endfor %}
+
+    </div>
+</div>
 {% endblock content %}
 
 {% block extra_js %}
