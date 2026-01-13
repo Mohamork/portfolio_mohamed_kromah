@@ -2,13 +2,17 @@
 {% load static %}
 
 {% block title %}
-Contact Page
+Project Page
 {% endblock title %}
 
 {% block extrahead %}
-<link rel="stylesheet" href="{% static % 'css/contact.css'}"> 
+<link rel="stylesheet" href="{% static % 'css/project.css'}"> 
 {% endblock extrahead %}
 
 {% block content %}
-<p> This is the contactpage </p>
+<p> This is the project </p>
 {% endblock content %}
+
+{% block extra_js %}
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock extra_js %}
