@@ -24,7 +24,7 @@ Home Page
     <div class="project" data-name="{{ project.name|lower }}" data-tags="{{ projects.tags.all|join: ', '|lower }}"> </div>
     <h2><a href="{% url 'project' project.id %}">{{ project.title }}</a></h2>
     <p>{{ project.description }}</p>
-    <p>Tags: {{ project.tags.all }}</p>
+    <p>Tags: {{ project.tags.all|join:', ' }}</p>
 
     {% endfor %}
 </div>
