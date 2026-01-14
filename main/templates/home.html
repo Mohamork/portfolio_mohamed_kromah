@@ -19,6 +19,15 @@ Home Page
 
     </div>
 </div>
+<div class="projects-list">
+    {% for project in projects %}
+    <div class="project" data-name="{{ project.name|lower }}" data-tags="{{ projects.tags.all|join: ', '|lower }}"> </div>
+    <h2><a href="{% url 'project' project.id %}">{{ project.title }}</a></h2>
+    <p>{{ project.description }}</p>
+    <p>Tags: {{ project.tags.all }}</p>
+
+    {% endfor %}
+</div>
 {% endblock content %}
 
 {% block extra_js %}
