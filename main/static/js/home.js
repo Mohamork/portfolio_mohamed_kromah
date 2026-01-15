@@ -4,7 +4,7 @@ document.AddEventListener("DOMContentLoaded", function () {
     const projects = document.querySelectorAll(".project")
 
     function filterProjects() {
-        const nameQuery = nameSearch.ariaValueMax.toLowerCase() ;
+        const nameQuery = nameSearch.value.toLowerCase() ;
 
         projects.forEach((project) => {
             const name = project.getAttribute('data-name') ;
@@ -18,5 +18,6 @@ document.AddEventListener("DOMContentLoaded", function () {
             })
 
         }
-        
+
+        nameSearch.addEventListener("keyup",filterProjects)
 } )
