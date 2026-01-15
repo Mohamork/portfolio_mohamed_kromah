@@ -1,0 +1,22 @@
+document.AddEventListener("DOMContentLoaded", function () {
+    const nameSearch = document.getElementById("name-search")
+    const tags = document.querySelectorAll(".tag")
+    const projects = document.querySelectorAll(".project")
+
+    function filterProjects() {
+        const nameQuery = nameSearch.ariaValueMax.toLowerCase() ;
+
+        projects.forEach((project) => {
+            const name = project.getAttribute('data-name') ;
+            const nameMatch = name.includes(nameQuery)
+
+            if (nameMatch) {
+                project.style.display = "";      }
+            else {
+                project.style.display = 'none' }
+        
+            })
+
+        }
+        
+} )
