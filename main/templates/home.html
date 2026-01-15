@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block title %}
-Home Page
+    Home Page
 {% endblock title %}
 
 {% block extrahead %}
-<link rel="stylesheet" href="{% static % 'css/home.css'}"> 
+    <link rel="stylesheet" href="{% static % 'css/home.css'}"> 
 {% endblock extrahead %}
 
 {% block content %}
@@ -21,16 +21,15 @@ Home Page
 </div>
 <div class="projects-list">
     {% for project in projects %}
-    <div class="project" data-name="{{ project.name|lower }}" data-tags="{{ projects.tags.all|join:', '|lower }}">
-        <h2><a href="{% url 'project' project.id %}">{{ project.title }}</a></h2>
-        <p>{{ project.description }}</p>
-        <p>Tags: {{ project.tags.all|join:', ' }}</p>
+        <div class="project" data-name="{{ project.title|lower }}" data-tags="{{ projects.tags.all|join:', '|lower }}">
+            <h2><a href="{% url 'project' project.id %}">{{ project.title }}</a></h2>
+            <p>{{ project.description }}</p>
+            <p>Tags: {{ project.tags.all|join:', ' }}</p>
     </div>
-
     {% endfor %}
 </div>
-{% endblock content %}
+{% endblock %}
 
 {% block extra_js %}
 <script src="{% static 'js/home.js' %}"></script>
-{% endblock extra_js %}
+{% endblock %}
