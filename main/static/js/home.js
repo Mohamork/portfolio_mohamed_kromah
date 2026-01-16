@@ -17,9 +17,24 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         
         })
-
     }
 
-    nameSearch.addEventListener("keyup",filterProjects)
+    
+    tags.forEach((tag) => {
+        tag.addEventListener("click", function () {
+            const selectedTag = this.getAttribute("data-tag")
 
+            projects.forEach((project) => {
+                const projectTags = project.getAttribute("data-tags") 
+                if (projectTags.includes(selectedTag)) {
+                    project.style.display = ""
+                }   else {
+                    project.style.display = "none"
+                }
+
+            })
+        })
+    })
+
+    nameSearch.addEventListener("keyup",filterProjects)
 })
