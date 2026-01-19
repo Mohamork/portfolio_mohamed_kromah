@@ -12,4 +12,4 @@ def contact(request) :
 
 def project(request,id) :
     project = get_object_or_404(Project, pk=id)
-    return(request,'project.html',{'project':project})
+    return render(request,'project.html',{'project':project})
