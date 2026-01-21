@@ -13,8 +13,12 @@ Project Page
 <div class="project-card">
     <div class="project-info">
         <h1>{{ project.title }}</h1>
-        <p><a href="{{ project.link }}">Projectlink</a></p>
-        <p>{{ project.description }}</p>
+        <p>
+            <a href="{{ project.link }}">Projectlink</a>
+        </p>
+        <p>
+            {{ project.description }}
+        </p>
         <a href="{% url 'home' %}">Back to home</a>
     </div>
     <div class="carousel">
