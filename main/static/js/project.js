@@ -10,7 +10,7 @@ function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("carousel-item")
     if (n > slides.length) {
-        slideIndex = 1;
+        slideIndex = 1
     }
     if (n < 1) {
         slideIndex = slides.lenght;
