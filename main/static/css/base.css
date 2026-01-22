@@ -15,17 +15,18 @@ body {
 }
 
 a {
-  color: #007bff;
+  color: #161616;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  text-decoration-color: #007bff;
 }
 
 /* Header and Navigation Menu */
 header {
-  background-color: #007bff;
+  background-color: #f4f4f4;
   color: white;
   padding: 10px 20px;
 }
@@ -42,12 +43,12 @@ header {
 }
 
 .nav-menu a {
-  color: white;
+  color: #161616;
   transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-  color: #d1eaff;
+  color: #161616;
 }
 
 /* Main Content Area */
