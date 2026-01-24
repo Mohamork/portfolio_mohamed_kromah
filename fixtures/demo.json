@@ -1,0 +1,58 @@
+[
+{
+  "model": "main.tag",
+  "pk": 1,
+  "fields": {
+    "name": "Django"
+  }
+},
+{
+  "model": "main.tag",
+  "pk": 2,
+  "fields": {
+    "name": "Python"
+  }
+},
+{
+  "model": "main.project",
+  "pk": 1,
+  "fields": {
+    "title": "My Python/Django Project 1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    "link": "",
+    "tags": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "main.project",
+  "pk": 2,
+  "fields": {
+    "title": "My Python/Django Project 2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    "link": "",
+    "tags": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "main.image",
+  "pk": 1,
+  "fields": {
+    "project": 1,
+    "image": "demo/placeholderimage1.png"
+  }
+},
+{
+  "model": "main.image",
+  "pk": 2,
+  "fields": {
+    "project": 1,
+    "image": "demo/placeholderimage2.png"
+  }
+}
+]
