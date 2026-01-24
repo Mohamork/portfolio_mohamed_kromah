@@ -1,0 +1,6 @@
+# Ignore Django database
+db.sqlite3
+
+# Ignore uploaded media
+media/
+
