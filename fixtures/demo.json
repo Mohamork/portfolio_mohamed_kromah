@@ -54,5 +54,21 @@
     "project": 1,
     "image": "demo/placeholderimage2.png"
   }
+},
+{
+  "model": "main.image",
+  "pk": 3,
+  "fields": {
+    "project": 2,
+    "image": "demo/placeholderimage1.png"
+  }
+},
+{
+  "model": "main.image",
+  "pk": 4,
+  "fields": {
+    "project": 2,
+    "image": "demo/placeholderimage2.png"
+  }
 }
 ]
