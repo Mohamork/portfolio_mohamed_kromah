@@ -1,8 +1,9 @@
+from django.conf import settings
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from .models import Project,Tag
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from .forms import ContactForm
 
 
@@ -22,10 +23,19 @@ def contact(request) :
             sender = form.cleaned_data['sender']
             cc_myself = form.cleaned_data['cc_myself']
             
-            recipients = ['k.m19981102@gmail.com']
+            recipients = [settings.CONTACT_EMAIL]
             if cc_myself:
                 recipients.append(sender)
-            send_mail(subject,message,sender,recipients)
+
+            email= EmailMessage(
+                subject=subject,
+                body=f'Form submission from portfolio sender: {sender}\n\n message:{message}',
+                from_email = settings.EMAIL_HOST_USER,
+                to = recipients,
+                reply_to= [sender],
+            )
+            email.send(fail_silently=False)
+            
             messages.success(request,'Your request was submitted successfully')
             return HttpResponseRedirect('thank-you')    
     else:
