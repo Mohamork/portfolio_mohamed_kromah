@@ -11,6 +11,11 @@ Contact Page
 
 {% block content %}
 <p> This is the contactpage </p>
+<form method="post" >
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Submit">
+</form>
 {% endblock content %}
 
 {% block extra_js %}
