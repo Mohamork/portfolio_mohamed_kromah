@@ -4,3 +4,17 @@ db.sqlite3
 # Ignore uploaded media
 media/
 
+#Ignore environment variables
+.env
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+.env/
+
+# Django
+*.log
+staticfiles/
+
