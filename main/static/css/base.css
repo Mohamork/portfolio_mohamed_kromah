@@ -54,6 +54,8 @@ header {
 
 .nav-menu a:hover {
   color: #161616;
+  text-decoration: underline;
+  text-decoration-color: #007bff;
 }
 
 /* Main Content Area */

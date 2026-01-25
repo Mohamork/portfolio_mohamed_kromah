@@ -11,12 +11,42 @@ Contact Page
 
 {% block content %}
 <p> This is the contactpage </p>
-<form method="post" >
+
+<form method="post" class='contact-form' >
     {% csrf_token %}
-    {{ form.as_ul }}
-    <input type="submit" value="Submit">
+
+    <div class="form-group">
+        <label>Subject
+        </label>
+        {{ form.subject }} 
+    </div>
+
+    <div class="form-group">
+        <label>Sender
+        </label>
+        {{ form.sender }} 
+    </div>
+
+    <div class="form-group">
+        <label>Message
+        </label>
+        {{ form.message }} 
+    </div>
+
+    <div class="form-group">
+        <label>CC myself
+        </label>
+        {{ form.cc_myself }} 
+    </div>
+
+    
+
+    <button type="submit">Submit</button>
 </form>
+
 {% endblock content %}
+
+
 
 {% block extra_js %}
 <script src="{% static 'js/project.js' %}"></script>

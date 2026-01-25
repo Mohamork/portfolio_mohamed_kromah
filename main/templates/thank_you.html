@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Success
+{% endblock %}
+
+{% block extrahead %}
+    <link rel="stylesheet" href="% static 'css/thank_you.css' %">
+{% endblock %}
+
+<body>
+    <header>
+        <ul class="nav-menu">
+            <li class="header"><a href="/home">Mohamed Kromah</a></li>
+            <li class="header"><a href="/contact">Contact</a></li>
+
+            
+            
+        </ul>
+    </header>
+
+    {% block content %}
+    <h2>Thank you</h2>
+     <p>Your request was submitted successfully.</p>
+     <br>
+     <a href="{% url 'home' %}">Back to home</a>
+    {% endblock %}
