@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 from .models import Project,Tag
 from django.core.mail import send_mail
 from .forms import ContactForm
@@ -25,12 +26,16 @@ def contact(request) :
             if cc_myself:
                 recipients.append(sender)
             send_mail(subject,message,sender,recipients)
+            messages.success(request,'Your request was submitted successfully')
             return HttpResponseRedirect('thank-you')    
     else:
         form = ContactForm()    
     return render(request,'contact.html',{'form':form})
 
 def thank_you(request):
+    storage = messages.get_messages(request)
+    if not any(msg.level == messages.SUCCESS for msg in storage):
+        return HttpResponseRedirect('/contact/')
     return render(request,'thank_you.html')
 
 def project(request,id) :
