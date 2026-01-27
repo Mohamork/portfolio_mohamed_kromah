@@ -29,7 +29,7 @@ def contact(request) :
 
             email= EmailMessage(
                 subject=subject,
-                body=f'Form submission from portfolio sender: {sender}\n\n message:{message}',
+                body=f'Portfolio form submission from the e-mailuser {sender}\n\n message:{message}',
                 from_email = settings.EMAIL_HOST_USER,
                 to = recipients,
                 reply_to= [sender],
